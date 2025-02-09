@@ -21,6 +21,6 @@ Resources:
     Properties: {}
 ```
 ##### Resources are mandatory. In this example, MyS3Bucket is the logical ID and identifies the S3 bucket resource to create.
-4. Deploy the stack and verify the instance creation.
+4. Deploy the stack and navigate to Amazon S3 to verify that your bucket has been created.
 5. Clean up the resources by deleting the stack.
 
