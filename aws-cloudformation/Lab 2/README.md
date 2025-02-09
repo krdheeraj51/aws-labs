@@ -7,7 +7,7 @@ The objective of this lab is to create an AWS CloudFormation template that provi
 
 ## Prerequisites
 
-Completion of [Lab 1](../Lab1/README.md)
+Completion of [Lab 1](../Lab%201/README.md)
 
 ## Steps
 
