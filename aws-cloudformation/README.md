@@ -6,7 +6,7 @@ This repository is designed to take you from **beginner to advanced** in AWS Clo
 ## 📚 Lab Overview
 Each lab focuses on a specific concept or use case, building step-by-step skills:
 1. **Lab 1: Creating s3 Bucket Using a CloudFormation Template**  
-2. **Lab 2: Managing Multiple Resources**  
+2. **Lab 2: Updating s3 Bucket Using CloudFormation Template**  
 3. **Lab 3: Parameters and Outputs**  
 ...  
 10. **Lab 10: Deploying a Highly Available Web Application**
