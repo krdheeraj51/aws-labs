@@ -1,4 +1,4 @@
-# Lab 2: Updating s3 Bucket Using a CloudFormation Template
+# Lab 3: Parameters and Outputs
 
 ## Objective
 
@@ -12,7 +12,7 @@ This lab aims to provide hands-on experience with managing configuration values 
 
 ## Prerequisites
 
-Completion of [Lab 3](../Lab%202/README.md)
+Completion of [Lab 2](../Lab%202/README.md)
 
 ## Steps
 
