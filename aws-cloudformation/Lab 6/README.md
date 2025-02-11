@@ -24,7 +24,7 @@ Completion of [Lab 5](../Lab%205/README.md)
 
 ## Steps
 
-#### Steps for Adding Multiple Resources:
+#### Steps for implementing DeletionPolicy:
 1. Navigate to AWS CloudFormation
 
 - Log in to your AWS Console.

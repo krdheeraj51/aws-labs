@@ -24,7 +24,7 @@ Completion of [Lab 4](../Lab%204/README.md)
 
 ## Steps
 
-#### Steps for Adding Multiple Resources:
+#### SSteps for implementing DependsOn:
 1. Navigate to AWS CloudFormation
 
 - Log in to your AWS Console.
