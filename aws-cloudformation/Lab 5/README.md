@@ -54,8 +54,7 @@ Resources:
       KeyName: !Ref MyKeyName # Example: Assuming you have a KeyName parameter - you'll need to define this parameter as well
       InstanceType: t2.micro # Added a required InstanceType
     DependsOn: MyS3Bucket # The EC2 instance will be created after the S3 bucket
-    Description: An EC2 instance. # Added a description
--   
+    Description: An EC2 instance. # Added a description 
 ```  
 4. Upload the CloudFormation Template
 
