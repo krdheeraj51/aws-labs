@@ -70,17 +70,13 @@ Resources:
 - Key Pair Name: Select an existing EC2 key pair from the dropdown (or create one in EC2 first).
 - Click Next.
 
-6. Configure Stack Options (Keep Default)
-- Leave all settings as default.
-- Click Next.
+6.  Review and Create the Stack
 
-7.  Review and Create the Stack
 - Review the stack details and ensure everything looks correct.
 - Scroll down and check the I acknowledge that AWS CloudFormation might create IAM resources box (only if your template has IAM roles).
 - Click Create stack.
 
-
-8. Monitor Stack Creation
+7. Monitor Stack Creation
 
 - In the CloudFormation > Stacks section, find your stack (DependsOnLab).
 - Click on it and go to the Events tab.
@@ -89,7 +85,8 @@ Resources:
     - The EC2 instance (MyEC2Instance) is created only after the bucket is successfully deployed.
 - This confirms that DependsOn is working correctly.
 
-9. Delete Stack (Cleanup)
+8. Delete Stack (Cleanup)
+
  - To remove all resources created by the stack:
  - Go to AWS CloudFormation → Stacks.
  - Select DependsOnLab.
