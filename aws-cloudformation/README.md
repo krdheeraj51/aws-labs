@@ -12,6 +12,8 @@ Each lab focuses on a specific concept or use case, building step-by-step skills
 5. **Lab 5: Understanding DependsOn in AWS CloudFormation**
 6. **Lab 6: Understanding DeletionPolicy in AWS CloudFormation**  
 7. **Lab 7: Understanding UpdateReplacePolicy in AWS CloudFormation**  
+8. **Lab 8: Understanding Mappings in AWS CloudFormation**  
+9. **Lab 9: Understanding Mappings in AWS CloudFormation**  
  
 ...  
 10. **Lab 10: Deploying a Highly Available Web Application**
