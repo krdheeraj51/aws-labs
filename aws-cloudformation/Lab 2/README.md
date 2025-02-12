@@ -17,16 +17,13 @@ Completion of [Lab 1](../Lab%201/README.md)
 4. Write the following YAML configuration:
 ```
 Resources:
- AWSTemplateFormatVersion: '2010-09-09'
-Description: AWS CloudFormation Template to create an S3 Bucket
-
-Resources:
   MyS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: my-unique-bucket-name  # Modify to a globally unique name
       VersioningConfiguration:
         Status: Enabled
+      # No BucketName property here!
+    Description: AWS CloudFormation Template to create an S3 Bucket
 ```
 ##### Resources are mandatory. In this example, MyS3Bucket is the logical ID and identifies the s3 bucket resource to create.
 4. Deploy the stack.

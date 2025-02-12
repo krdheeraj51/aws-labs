@@ -40,8 +40,7 @@ Resources:
   MyS3Bucket:
     Type: 'AWS::S3::Bucket'  # Corrected resource type to S3::Bucket
     Description: An S3 bucket. # Added a description
-    DeletionPolicy: Retain
--   
+    DeletionPolicy: Retain   
 ```  
 4. Upload the CloudFormation Template
 

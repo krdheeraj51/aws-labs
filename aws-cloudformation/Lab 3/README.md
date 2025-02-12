@@ -38,10 +38,6 @@ Completion of [Lab 2](../Lab%202/README.md)
     - Add a Description for clarity.
 3. Write the following YAML configuration:
 ```
-AWSTemplateFormatVersion: 2010-09-09
-
-Description: CloudFormation template demonstrating SSM Parameter integration
-
 Parameters:
   InstanceType:
     Type: 'AWS::SSM::Parameter::Value<String>'
@@ -57,16 +53,16 @@ Resources:
   MyEC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
-      InstanceType: !Ref InstanceType
+      InstanceType: !Ref InstanceType  # This line was missing!
       ImageId: !Ref AMI
-      KeyName: !Ref MyKeyName # Example: Assuming you have a KeyName parameter
+      # KeyName: !Ref MyKeyName # Example: Assuming you have a KeyName parameter - Uncomment and define MyKeyName if needed
       Tags:
         - Key: Name
           Value: MySSMParameterInstance
 
-  MyKeyName: # Example KeyPair parameter (not from SSM)
-    Type: AWS::EC2::KeyPair::KeyName
-    Description: Name of an existing EC2 KeyPair to enable SSH access
+# MyKeyName: # Example KeyPair parameter (not from SSM) - Uncomment if you want to use a KeyPair
+#   Type: AWS::EC2::KeyPair::KeyName
+#   Description: Name of an existing EC2 KeyPair to enable SSH access
 
 Outputs:
   InstanceId:

@@ -48,8 +48,7 @@ Resources:
       BucketName: !Ref BucketName
     Description: An S3 bucket with UpdateReplacePolicy set to Retain.
     DeletionPolicy: Retain
-    UpdateReplacePolicy: Retain
--   
+    UpdateReplacePolicy: Retain   
 ```  
 4. Upload the CloudFormation Template
 
