@@ -57,7 +57,6 @@ Metadata:
           default: "EC2 Configuration"
         Parameters:
           - InstanceType
-          - KeyName
       - Label:
           default: "Network Configuration"
         Parameters:
@@ -66,12 +65,6 @@ Metadata:
     ParameterLabels:
       InstanceType:
         default: "EC2 Instance Type"
-      KeyName:
-        default: "SSH Key Name"
-      VPC:
-        default: "VPC ID"
-      Subnet:
-        default: "Subnet ID"
 
 Parameters:
   InstanceType:
@@ -84,26 +77,12 @@ Parameters:
       - t3.micro
       - t3.small
 
-  KeyName:
-    Type: AWS::EC2::KeyPair::KeyName
-    Description: "Select an existing EC2 KeyPair for SSH access"
-
-  VPC:
-    Type: AWS::EC2::VPC::Id
-    Description: "Choose the VPC where the EC2 instance will be launched"
-
-  Subnet:
-    Type: AWS::EC2::Subnet::Id
-    Description: "Choose a public subnet for the EC2 instance"
-
 Resources:
   MyEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: !Ref InstanceType
-      KeyName: !Ref KeyName
       ImageId: ami-085ad6ae776d8f09c  # Amazon Linux 2 AMI (Replace with valid AMI ID for your region)
-      SubnetId: !Ref Subnet
       SecurityGroupIds:
         - !Ref MySecurityGroup
       UserData:
@@ -120,7 +99,6 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: "Allow HTTP and SSH access"
-      VpcId: !Ref VPC
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
