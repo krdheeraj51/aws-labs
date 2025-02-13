@@ -34,11 +34,11 @@ Completion of [Lab 7](../Lab%207/README.md)
 Mappings:
   RegionMap:
     us-east-1:
-      AMI: ami-0c55b159cbfafe1f0  # Example AMI ID for us-east-1
+      AMI: ami-085ad6ae776d8f09c  # Example AMI ID for us-east-1
     us-west-1:
-      AMI: ami-0bdb828fd58c52235  # Example AMI ID for us-west-1
-    eu-west-1:
-      AMI: ami-047bb4163c506cd98  # Example AMI ID for eu-west-1
+      AMI: ami-03d49b144f3ee2dc4  # Example AMI ID for us-west-1
+    us-west-2:
+      AMI: ami-0005ee01bca55ab66  # Example AMI ID for us-west-2
 
 Resources:
   MyEC2Instance:
