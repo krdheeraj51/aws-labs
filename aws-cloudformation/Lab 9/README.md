@@ -24,8 +24,7 @@ Completion of [Lab 8](../Lab%208/README.md)
 - Log in to your AWS Console.
 - In the search bar, type CloudFormation and click on the service.
 - Click Create Stack → With new resources (standard).
-
-
+---
 2. Create a CloudFormation Template **output-template.yaml**:
 
 3. Write the following YAML configuration:
@@ -62,24 +61,23 @@ Outputs:
 - In the Specify template section, choose Upload a template file.
 - Click Choose file and select your YAML file containing the template.
 - Click Next.
-
+---
 5. Configure Stack Details
 
 - Stack name: Enter **OutputsLab**.
 - Click Next.
-
+---
 6.  Review and Create the Stack
 - Review the details to ensure everything is correct.
 - Click Create stack.
-
-
+---
 7. Monitor Stack Creation
 
 - In the CloudFormation > Stacks section,
 - Click on the stack **OutputsLab**.
 - Navigate to the Outputs tab.
 - Verify that the S3 bucket name and EC2 instance ID are displayed.
-
+---
 8. Validate the Outputs in AWS Console
 
 - Check the S3 Bucket:
@@ -88,7 +86,7 @@ Outputs:
 - Check the EC2 Instance:
     - Go to EC2 > Instances.
     - Find the instance using the Instance ID displayed in the Outputs tab.
-
+---
 9. Use Outputs in Another Stack (Optional Advanced Step)
 
 1. Create another CloudFormation stack that references the exported bucket name:
@@ -100,14 +98,13 @@ Resources:
       BucketName: !ImportValue MyS3BucketName
 ```
 2. Deploy this stack to see how outputs can be shared across stacks.
-
+---
 10. Delete the CloudFormation Stack
 
 - Go to AWS CloudFormation > Stacks.
 - Select OutputsLab.
 - Click Delete and confirm.
-
-
+---
 ### Key Takeaways:
 
 ✅ Outputs provide an easy way to retrieve important resource details from CloudFormation.
