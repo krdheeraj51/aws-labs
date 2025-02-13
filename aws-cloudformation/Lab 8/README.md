@@ -24,8 +24,7 @@ Completion of [Lab 7](../Lab%207/README.md)
 - Log in to your AWS Console.
 - In the search bar, type CloudFormation and click on the service.
 - Click Create Stack → With new resources (standard).
-
-
+---
 2. Create a CloudFormation Template **mapping-template.yaml**:
 
 3. Write the following YAML configuration:
@@ -58,38 +57,35 @@ Resources:
 - In the Specify template section, choose Upload a template file.
 - Click Choose file and select your YAML file containing the template.
 - Click Next.
-
+---
 5. Configure Stack Details
 
 - Stack name: Enter **MappingsLab**.
 - Click Next.
-
+---
 6.  Review and Create the Stack
 - Review the details to ensure everything is correct.
 - Click Create stack.
-
-
+---
 7. Monitor Stack Creation
 
 - In the CloudFormation > Stacks section,
 - Click on the stacck **MappingsLab**.
 - In the Resources tab, confirm that MyEC2Instance is created.
 - Navigate to EC2 Instances and verify that the instance is running.
-
+---
 8. Validate the Mapping Behavior
 
 - Check the EC2 instance details in AWS Console.
 - Look at the AMI ID used for the instance.
 - Verify that it matches the correct AMI ID for the region as defined in the Mappings section.
-
-
+---
 9. Delete the CloudFormation Stack
 
 - Go to AWS CloudFormation > Stacks.
 - Select MappingsLab.
 - Click Delete and confirm.
-
-
+---
 ### Key Takeaways:
 
 ✅ Mappings allow region-specific or environment-specific configurations in CloudFormation.
