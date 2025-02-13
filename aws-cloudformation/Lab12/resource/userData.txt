@@ -1,0 +1,11 @@
+#!/bin/bash
+yum update -y
+yum install -y httpd
+amazon-linux-extras enable php8.0
+yum install -y php php-cli php-mbstring php-xml php-json php-common
+systemctl start httpd
+systemctl enable httpd
+chown -R apache:apache /var/www/html
+chmod -R 755 /var/www/html
+echo "<?php phpinfo(); ?>" > /var/www/html/index.php
+systemctl restart httpd
