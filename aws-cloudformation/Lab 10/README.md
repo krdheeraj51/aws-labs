@@ -10,7 +10,7 @@
 ### Key Concept: Conditions in CloudFormation
 - Conditions allow you to create resources only if certain conditions are met.
 - They are useful for multi-environment deployments (e.g., Dev, QA, Prod).
-- Conditions use intrinsic functions like !Equals, !If, !Not, !Or, and !And.
+- Conditions use intrinsic functions like **!Equals, !If, !Not, !Or, and !And**.
 
 ### Syntax 
 ```
@@ -61,9 +61,8 @@ Resources:
     Type: 'AWS::EC2::Instance'
     Condition: CreateEC2  # EC2 instance is created only if the condition is met
     Properties:
-      ImageId: ami-0c55b159cbfafe1f0  # Update with a valid AMI ID for your region
+      ImageId: ami-085ad6ae776d8f09c  # Update with a valid AMI ID for your region
       InstanceType: t2.micro
-      KeyName: my-key-pair  # Replace with an actual key pair
 
 Outputs:
   S3BucketName:
