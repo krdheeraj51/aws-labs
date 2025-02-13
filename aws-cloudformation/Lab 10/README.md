@@ -1,4 +1,4 @@
-# Lab 9: Understanding Conditions in AWS CloudFormation
+# Lab 10: Understanding Conditions in AWS CloudFormation
 ## Objective
 
 1. Learn how to use Conditions in AWS CloudFormation.
