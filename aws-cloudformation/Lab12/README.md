@@ -1,4 +1,4 @@
-# Lab 11: Understanding Metadata – AWS::CloudFormation::Interface in AWS CloudFormation
+# Lab 12: Understanding Metadata – AWS::CloudFormation::Interface in AWS CloudFormation
 ## Objective
 
 1. Learn how to use Metadata in CloudFormation.
