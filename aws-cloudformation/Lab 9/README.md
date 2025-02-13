@@ -40,9 +40,8 @@ Resources:
   MyEC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
-      ImageId: ami-0c55b159cbfafe1f0  # Example AMI ID (update based on region)
+      ImageId: ami-085ad6ae776d8f09c  # Example AMI ID (update based on region)
       InstanceType: t2.micro
-      KeyName: my-key-pair  # Replace with an actual key pair
 
 Outputs:
   S3BucketName:
