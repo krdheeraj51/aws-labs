@@ -31,8 +31,7 @@ Completion of [Lab 9](../Lab%209/README.md)
 - Log in to your AWS Console.
 - In the search bar, type CloudFormation and click on the service.
 - Click Create Stack → With new resources (standard).
-
-
+---
 2. Create a CloudFormation Template **conditional-template.yaml**:
 
 3. Write the following YAML configuration:
@@ -81,7 +80,7 @@ Outputs:
 - In the Specify template section, choose Upload a template file.
 - Click Choose file and select your YAML file containing the template.
 - Click Next.
-
+---
 5. Configure Stack Details
 
 - Stack name: Enter **ConditionsLab**.
@@ -89,12 +88,12 @@ Outputs:
     - Dev: No EC2 instance will be created.
     - Production: EC2 instance will be created.
 - Click Next.
-
+---
 6. Review and Create the Stack
+
 - Review the details to ensure everything is correct.
 - Click Create stack.
-
-
+---
 7. Monitor Stack Creation
 
 - In the CloudFormation > Stacks section,
@@ -103,7 +102,7 @@ Outputs:
   - If Environment = Production: EC2 instance is created.
   - If Environment = Dev: EC2 instance is skipped.
 - Check the Outputs tab for the EC2 creation status.
-
+---
 8. Validate the Outputs in AWS Console
 
 - Check the S3 Bucket:
@@ -112,14 +111,13 @@ Outputs:
     - Go to EC2 > Instances.
     - If **Production**, find the instance in the list.
     - If **Dev**, no instance should exist.
-
+---
 9. Delete the CloudFormation Stack
 
 - Go to AWS CloudFormation > Stacks.
 - Select ConditionsLab.
 - Click Delete and confirm.
-
-
+---
 ### Key Takeaways:
 
 ✅ Conditions allow conditional resource creation based on input parameters.
