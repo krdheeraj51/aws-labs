@@ -57,7 +57,6 @@ Metadata:
           default: "EC2 Configuration"
         Parameters:
           - InstanceType
-          - KeyName
       - Label:
           default: "S3 Bucket Configuration"
         Parameters:
@@ -65,8 +64,6 @@ Metadata:
     ParameterLabels:
       InstanceType:
         default: "EC2 Instance Type"
-      KeyName:
-        default: "SSH Key Name"
       BucketName:
         default: "S3 Bucket Name"
 
@@ -80,10 +77,6 @@ Parameters:
       - t2.small
       - t3.micro
       - t3.small
-
-  KeyName:
-    Type: AWS::EC2::KeyPair::KeyName
-    Description: "Select an existing EC2 KeyPair for SSH access"
 
   BucketName:
     Type: String
@@ -99,8 +92,7 @@ Resources:
     Type: 'AWS::EC2::Instance'
     Properties:
       InstanceType: !Ref InstanceType
-      KeyName: !Ref KeyName
-      ImageId: ami-0c55b159cbfafe1f0  # Replace with a valid AMI ID for your region
+      ImageId: ami-085ad6ae776d8f09c  # Replace with a valid AMI ID for your region
 
 Outputs:
   S3BucketName:
@@ -110,7 +102,6 @@ Outputs:
   EC2InstanceId:
     Description: "Created EC2 Instance ID"
     Value: !Ref MyEC2Instance 
-   
 ```  
 4. Upload the CloudFormation Template
 

@@ -46,11 +46,9 @@ Resources:
     Properties:
       ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
       InstanceType: t2.micro
-      KeyName: my-key-pair # Replace with an actual key pair
       Tags:
         - Key: Name
-          Value: MappingLabInstance
-   
+          Value: MappingLabInstance   
 ```  
 4. Upload the CloudFormation Template
 
