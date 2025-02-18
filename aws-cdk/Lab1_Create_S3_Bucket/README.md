@@ -42,8 +42,8 @@ The objective of this lab is to create an Amazon S3 bucket using AWS CDK in Pyth
 ### **Step 2: Define the S3 Bucket in CDK**  
 1. Open `aws_cdk_s3_lab/aws_cdk_s3_lab_stack.py` in a text editor.  
 2. Modify the file to define an S3 bucket:  
-   ```
- from aws_cdk import Stack
+```
+from aws_cdk import Stack
 from aws_cdk import aws_s3 as s3
 from constructs import Construct  # CDK v2 uses constructs module
 
@@ -57,7 +57,7 @@ class S3BucketStack(Stack):
             bucket_name="my-cdk-bucket-example",
             # versioned=True
         )
-   ```
+```
 
 ---
 
