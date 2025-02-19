@@ -41,7 +41,7 @@ The objective of this lab is to create an AWS Lambda function using AWS CDK in P
 mkdir lambda
 ```
 2. Create a new Python file inside lambda/ named lambda_function.py and add the following content::  
-   ```
+   ```python
    def handler(event, context):
     print("Hello from AWS Lambda!")
     return {
@@ -55,7 +55,7 @@ mkdir lambda
 ### **Step 3: Modify the CDK Stack**  
 1. Open lambda_cdk_lab/lambda_cdk_lab_stack.py and modify it as follows:
 If this is your first time using AWS CDK, run:  
-```
+```python
 from aws_cdk import core
 import aws_cdk.aws_lambda as _lambda
 
