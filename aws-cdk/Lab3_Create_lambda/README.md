@@ -14,24 +14,24 @@ The objective of this lab is to create an AWS Lambda function using AWS CDK in P
 ## Steps
 
 ### **Step 1: Set Up Your AWS CDK Project**  
-1. **Create a new project directory** and open it in your terminal:  
-   ```
+1. **Create a new project directory** and open it in your terminal:
+```
   mkdir lambda-cdk-lab
   cd lambda-cdk-lab
-   ```
-2. **Initialize the AWS CDK project** with Python:  
-   ```
+```
+3. **Initialize the AWS CDK project** with Python:  
+```
    cdk init app --language python
-   ```
-3. **Create a virtual environment and activate it**:  
-   ```
+```
+4. **Create a virtual environment and activate it**:  
+```
    python -m venv .venv
    source .venv/bin/activate  # Windows: .venv\Scripts\activate
-   ```
-4. **Install dependencies**:  
-   ```
+```
+5. **Install dependencies**:  
+```
    pip install -r requirements.txt
-   ```
+```
 
 ---
 
@@ -41,7 +41,7 @@ The objective of this lab is to create an AWS Lambda function using AWS CDK in P
 mkdir lambda
 ```
 2. Create a new Python file inside lambda/ named lambda_function.py and add the following content::  
-   ```
+   ```python
    def handler(event, context):
     print("Hello from AWS Lambda!")
     return {
@@ -55,7 +55,7 @@ mkdir lambda
 ### **Step 3: Modify the CDK Stack**  
 1. Open lambda_cdk_lab/lambda_cdk_lab_stack.py and modify it as follows:
 If this is your first time using AWS CDK, run:  
-```
+```python
 from aws_cdk import core
 import aws_cdk.aws_lambda as _lambda
 
