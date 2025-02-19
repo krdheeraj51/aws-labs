@@ -1,4 +1,4 @@
-# Lab: Create AWS Lambda using AWS CDK
+# Lab 3: Create AWS Lambda using AWS CDK
 
 ## Objective
 The objective of this lab is to create an AWS Lambda function using AWS CDK in Python. By completing this lab, participants will understand how to define and deploy AWS Lambda functions programmatically using Infrastructure as Code (IaC).
