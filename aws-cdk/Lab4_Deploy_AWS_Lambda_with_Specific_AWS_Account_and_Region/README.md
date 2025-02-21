@@ -55,30 +55,35 @@ mkdir lambda
 1. Open lambda_cdk_lab/lambda_cdk_lab_stack.py and modify it as follows:
 If this is your first time using AWS CDK, run:  
 ```python
-from aws_cdk import core
-import aws_cdk.aws_lambda as _lambda
+from aws_cdk import (
+    Stack,
+    aws_lambda as _lambda
+)
+from constructs import Construct
+class LambdaCdkLabStack(Stack):
 
-class LambdaCdkLabStack(core.Stack):
-    def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
-        super().__init__(scope, id, **kwargs)
+    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
 
-        lambda_function = _lambda.Function(
-            self, "MyLambdaFunction",
+        # The code that defines your stack goes here
+        lambdaFn = _lambda.Function(
+            self, "LambdaCdkLabFunction",
             runtime=_lambda.Runtime.PYTHON_3_8,
             handler="lambda_function.handler",
             code=_lambda.Code.from_asset("lambda")
         )
+
 ```
 2. Open app.py and modify it to include AWS account and region:
 ```python
-from aws_cdk import core
+import aws_cdk as cdk
+
 from lambda_cdk_lab.lambda_cdk_lab_stack import LambdaCdkLabStack
-
-app = core.App()
-
-env = core.Environment(account="YOUR_AWS_ACCOUNT_ID", region="YOUR_AWS_REGION")
-
-LambdaCdkLabStack(app, "LambdaCdkLabStack", env=env)
+app = cdk.App()
+env = cdk.Environment(account="YOUR_AWS_ACCOUNT_ID", region="YOUR_AWS_REGION")
+LambdaCdkLabStack(app, "LambdaCdkLabStack",env=env
+   
+)
 
 app.synth()
 
