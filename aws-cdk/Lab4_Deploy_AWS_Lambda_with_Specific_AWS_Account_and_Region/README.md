@@ -69,8 +69,8 @@ class LambdaCdkLabStack(Stack):
         lambdaFn = _lambda.Function(
             self, "LambdaCdkLabFunction",
             runtime=_lambda.Runtime.PYTHON_3_8,
-            handler="lambda_cdk_lab.handler",
-            code=_lambda.Code.from_asset("lambda_cdk_lab")
+            handler="lambda_function.handler",
+            code=_lambda.Code.from_asset("lambda")
         )
 
 ```
