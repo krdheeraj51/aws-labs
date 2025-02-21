@@ -80,7 +80,7 @@ import aws_cdk as cdk
 
 from lambda_cdk_lab.lambda_cdk_lab_stack import LambdaCdkLabStack
 app = cdk.App()
-env = cdk.Environment(account="123416447623", region="us-east-2")
+env = cdk.Environment(account="YOUR_AWS_ACCOUNT_ID", region="YOUR_AWS_REGION")
 LambdaCdkLabStack(app, "LambdaCdkLabStack",env=env
    
 )
