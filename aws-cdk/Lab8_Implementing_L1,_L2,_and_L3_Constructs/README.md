@@ -46,13 +46,13 @@ cdk init app --language python
 ### Step 3: Define VPC, EC2, Subnets, User Data, and Security Group
 1. Open `l1_l2_l3_cdk_lab/l1_l2_l3_cdk_lab_stack.py` and modify it as follows:
 ```python
-from aws_cdk import core
+import aws_cdk as cdk
 import aws_cdk.aws_s3 as s3
 import aws_cdk.aws_s3_deployment as s3_deployment
 import aws_cdk.aws_s3 as s3_l1
-
-class L1L2L3CdkLabStack(core.Stack):
-    def __init__(self, scope: core.Construct, id: str, **kwargs):
+from constructs import Construct
+class L1L2L3CdkLabStack(cdk.Stack):
+    def __init__(self, scope: Construct, id: str, **kwargs):
         super().__init__(scope, id, **kwargs)
 
         # L1 Construct (Low-Level: CloudFormation representation)
