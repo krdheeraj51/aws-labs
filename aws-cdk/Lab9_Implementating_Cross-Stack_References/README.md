@@ -60,7 +60,7 @@ class NetworkStack(cdk.Stack):
         )
 
         # Export VPC ID to be used in another stack
-        core.CfnOutput(self, "VpcId", value=self.vpc.vpc_id)
+        cdk.CfnOutput(self, "VpcId", value=self.vpc.vpc_id)
 ```
 
 ---
