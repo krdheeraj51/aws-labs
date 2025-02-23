@@ -45,11 +45,12 @@ By completing this lab, you will learn how to share resources across stacks effi
 2. Create a new file named `network_stack.py` and add the following code:  
 
 ```python
-from aws_cdk import core
+import aws_cdk as cdk
 import aws_cdk.aws_ec2 as ec2
+from constructs import Construct
 
-class NetworkStack(core.Stack):
-    def __init__(self, scope: core.Construct, id: str, **kwargs):
+class NetworkStack(cdk.Stack):
+    def __init__(self, scope: Construct, id: str, **kwargs):
         super().__init__(scope, id, **kwargs)
 
         # Create a VPC
@@ -68,11 +69,12 @@ class NetworkStack(core.Stack):
 1. Create a new file named `compute_stack.py` and add the following code:
 
 ```python
-from aws_cdk import core
+import aws_cdk as cdk
 import aws_cdk.aws_ec2 as ec2
+from constructs import Construct
 
-class ComputeStack(core.Stack):
-    def __init__(self, scope: core.Construct, id: str, network_stack: NetworkStack, **kwargs):
+class ComputeStack(cdk.Stack):
+    def __init__(self, scope: Construct, id: str, network_stack: NetworkStack, **kwargs):
         super().__init__(scope, id, **kwargs)
 
         # Use the VPC from NetworkStack
@@ -104,11 +106,11 @@ Modify `app.py` to deploy both stacks in order:
 
 ```python
 #!/usr/bin/env python3
-from aws_cdk import core
+import aws_cdk as cdk
 from network_stack import NetworkStack
 from compute_stack import ComputeStack
 
-app = core.App()
+app = cdk.App()
 
 # Create Network Stack
 network_stack = NetworkStack(app, "NetworkStack")
