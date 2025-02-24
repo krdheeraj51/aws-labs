@@ -31,7 +31,7 @@ By the end of this lab, you will understand how **nested stacks** work in AWS CD
 2. **Create and activate a virtual environment:**  
    ```sh
    python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   source .venv/bin/activate  # On Windows: .venv/Scripts/activate
    ```
 3. **Install dependencies:**  
    ```sh
@@ -41,15 +41,16 @@ By the end of this lab, you will understand how **nested stacks** work in AWS CD
 ---
 
 ## **Step 2: Create the Nested VPC Stack**
-1. Inside the `lib` folder, create a new file named `network_stack.py`.  
+1. Inside the `nested_stack_lab` folder, create a new file named `network_stack.py`.  
 2. Add the following code to create a VPC in a **nested stack**:  
 
 ```python
 import aws_cdk as cdk
 import aws_cdk.aws_ec2 as ec2
+from constructs import Construct
 
 class NetworkStack(cdk.NestedStack):
-    def __init__(self, scope: cdk.Construct, id: str, **kwargs):
+    def __init__(self, scope: Construct, id: str, **kwargs):
         super().__init__(scope, id, **kwargs)
 
         # Create a VPC
@@ -65,15 +66,15 @@ class NetworkStack(cdk.NestedStack):
 ---
 
 ## **Step 3: Create the Nested EC2 Stack**
-1. Inside the `lib` folder, create a new file named `compute_stack.py`.  
+1. Inside the `nested_stack_lab` folder, create a new file named `compute_stack.py`.  
 2. Add the following code to launch an EC2 instance inside the **nested VPC stack**:  
 
 ```python
 import aws_cdk as cdk
 import aws_cdk.aws_ec2 as ec2
-
+from constructs import Construct
 class ComputeStack(cdk.NestedStack):
-    def __init__(self, scope: cdk.Construct, id: str, vpc: ec2.Vpc, **kwargs):
+    def __init__(self, scope: Construct, id: str, vpc: ec2.Vpc, **kwargs):
         super().__init__(scope, id, **kwargs)
 
         # Create a Security Group for EC2
@@ -102,11 +103,12 @@ class ComputeStack(cdk.NestedStack):
 
 ```python
 import aws_cdk as cdk
-from network_stack import NetworkStack
-from compute_stack import ComputeStack
+from constructs import Construct
+from nested_stack_lab.compute_stack import ComputeStack
+from nested_stack_lab.network_stack import NetworkStack
 
 class MainStack(cdk.Stack):
-    def __init__(self, scope: cdk.Construct, id: str, **kwargs):
+    def __init__(self, scope: Construct, id: str, **kwargs):
         super().__init__(scope, id, **kwargs)
 
         # Create the Nested VPC Stack
