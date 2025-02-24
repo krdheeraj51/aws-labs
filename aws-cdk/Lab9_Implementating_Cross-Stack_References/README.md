@@ -31,7 +31,7 @@ By completing this lab, you will learn how to share resources across stacks effi
 2. **Create and activate a virtual environment:**
    ```sh
    python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   source .venv/bin/activate  # On Windows: .venv/Scripts/activate
    ```
 3. **Install dependencies:**
    ```sh
@@ -41,7 +41,7 @@ By completing this lab, you will learn how to share resources across stacks effi
 ---
 
 ### **Step 2: Create Network Stack (VPC)**
-1. Navigate to the `lib` folder and open `cross_stack_lab_stack.py`.  
+1. Navigate to the `cross_stack_lab` folder and open `cross_stack_lab_stack.py`.  
 2. Create a new file named `network_stack.py` and add the following code:  
 
 ```python
@@ -72,6 +72,7 @@ class NetworkStack(cdk.Stack):
 import aws_cdk as cdk
 import aws_cdk.aws_ec2 as ec2
 from constructs import Construct
+from network_stack import NetworkStack
 
 class ComputeStack(cdk.Stack):
     def __init__(self, scope: Construct, id: str, network_stack: NetworkStack, **kwargs):
@@ -107,6 +108,8 @@ Modify `app.py` to deploy both stacks in order:
 ```python
 #!/usr/bin/env python3
 import aws_cdk as cdk
+import sys
+sys.path.insert(0, './cross_stack_lab')
 from network_stack import NetworkStack
 from compute_stack import ComputeStack
 
