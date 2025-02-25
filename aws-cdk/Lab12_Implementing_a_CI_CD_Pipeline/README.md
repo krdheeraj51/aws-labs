@@ -70,7 +70,8 @@ from aws_cdk import (
     aws_codepipeline as codepipeline,
     aws_codepipeline_actions as cpactions,
     aws_codebuild as codebuild,
-    aws_lambda as _lambda
+    aws_lambda as _lambda,
+    SecretValue
 )
 from constructs import Construct
 
@@ -107,14 +108,16 @@ class CicdPipelineStack(Stack):
         # GitHub Source
         source_artifact = codepipeline.Artifact()
         build_artifact = codepipeline.Artifact()
+        oauth_token = SecretValue.secrets_manager('github_cicd_accesss_secure_token')
 
         source_action = cpactions.GitHubSourceAction(
-            action_name="GitHub_Source",
-            owner="your-github-username",
+            action_name="GitHub_Source1",
+            owner="krdheeraj51",
             repo="cdk-cicd-pipeline",
-            oauth_token=Stack.of(self).node.try_get_context("github-token"),
+            oauth_token=oauth_token,
             output=source_artifact,
-            branch="main"
+            branch="main",
+            trigger=cpactions.GitHubTrigger.WEBHOOK
         )
 
         # CodeBuild Action
@@ -166,12 +169,12 @@ class CicdPipelineStack(Stack):
    - Go to **GitHub → Settings → Developer Settings → Personal Access Tokens**.
    - Generate a **classic token** with **repo read access**.
 
-2. **Store the token in CDK context**:
-   ```sh
-   cdk context set github-token YOUR_GITHUB_PERSONAL_ACCESS_TOKEN
-   ```
-   > Replace `YOUR_GITHUB_PERSONAL_ACCESS_TOKEN` with your actual token.
+2. **Store the token in secret Manager**:
+- Navigate to AWS Secrets Manager:
 
+      - Open the AWS Management Console and navigate to the AWS Secrets Manager service.
+      - Create a New Secret:
+      - Click Store a new secret.
 ---
 
 ## **Step 6: Commit Code to GitHub**
