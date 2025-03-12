@@ -10,11 +10,11 @@ Each lab focuses on a specific concept or use case, building step-by-step skills
 3. **[Lab 3: Parameters and Outputs](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab3_Parameters_and_Outputs)**
 4. **[Lab 4: Adding Multiple Resources](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab4_Addding_Multiple_Resources)**
 5. **[Lab 5: Understanding DependsOn in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab5_Understanding_DependsOn_in_AWS_CloudFormation)**
-6. **[Lab 6: Understanding DeletionPolicy in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab6)**
-7. **[Lab 7: Understanding UpdateReplacePolicy in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab7)**
-8. **[Lab 8: Understanding Mappings in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab8)**
-9. **[Lab 9: Understanding Mappings in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab9)**
-10. **[Lab 10: Deploying a Highly Available Web Application](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab10)**
+6. **[Lab 6: Understanding DeletionPolicy in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab6_Understanding_DeletionPolicy)**
+7. **[Lab 7: Understanding UpdateReplacePolicy in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab7_Understanding_UpdateReplacePolicy)**
+8. **[Lab 8: Understanding Mappings in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab8_Mappings)**
+9. **[Lab 9: Understanding Mappings in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab9_Outputs)**
+10. **[Lab 10: Deploying a Highly Available Web Application](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab10_Understanding_Conditions)**
 11. **[Lab 11: Understanding Nested Stacks in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab11)**
 12. **[Lab 12: Using Fn::Sub in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab12)**
 13. **[Lab 13: Using Conditions in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab13)**
