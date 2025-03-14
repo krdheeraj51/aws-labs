@@ -15,11 +15,11 @@ Each lab focuses on a specific concept or use case, building step-by-step skills
 8. **[Lab 8: Understanding Mappings in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab8_Mappings)**
 9. **[Lab 9: Understanding Mappings in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab9_Outputs)**
 10. **[Lab 10: Deploying a Highly Available Web Application](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab10_Understanding_Conditions)**
-11. **[Lab 11: Understanding Nested Stacks in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab11)**
-12. **[Lab 12: Using Fn::Sub in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab12)**
-13. **[Lab 13: Using Conditions in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab13)**
-14. **[Lab 14: Using Intrinsic Functions in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab14)**
-15. **[Lab 15: Using Transform in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab15)**
+11. **[Lab 11: Understanding Nested Stacks in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab11_Understanding_Metadata)**
+12. **[Lab 12: Using Fn::Sub in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab12_Understanding_Metadata)**
+13. **[Lab 13: Using Conditions in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab13_Understanding_Metadata/READEME.md)**
+14. **[Lab 14: Using Intrinsic Functions in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab14_CFN_/READEME.md)**
+15. **[Lab 15: Using Transform in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/Lab15_Nested_stack/READEME.md)**
 16. **[Lab 16: Using Metadata in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab16)**
 17. **[Lab 17: Using Resource Attributes in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab17)**
 18. **[Lab 18: Using StackSets in AWS CloudFormation](https://github.com/krdheeraj51/aws-labs/tree/main/aws-cloudformation/lab18)**
